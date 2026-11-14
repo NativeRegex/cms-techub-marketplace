@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --cyber-bg: #050810;
+  --cyber-panel: #0D1117;
+  --cyber-card: #161B22;
+  --cyber-border: rgba(0, 240, 200, 0.25);
+  --cyber-accent: #00F0C8;
+  --cyber-accent-dim: #00A88C;
+  --cyber-secondary: #FFB020;
+  --cyber-text: #E6EDF3;
+  --cyber-text-dim: #8B98A5;
+}
+
+html, body, #root {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--cyber-bg);
+  color: var(--cyber-text);
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+}
+
+#tech-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.layout-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--cyber-card);
+  color: var(--cyber-text);
+  border: 1px solid var(--cyber-border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--cyber-accent);
+  box-shadow: 0 0 0 3px rgba(0, 240, 200, 0.15);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--cyber-panel); }
+::-webkit-scrollbar-thumb { background: var(--cyber-accent-dim); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--cyber-accent); }
